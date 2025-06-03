@@ -1,0 +1,13 @@
+{
+  "assemblyStates": {
+    "C14A7809EB1_createOC.u0lzI4o7zwC17zEXU23Uhw44": {
+      "namespace": "UiPath.IntegrationService.Activities.SWEntities.C14A7809EB1_createOCR_Create.Bundle",
+      "providerName": "CustomEntities",
+      "key": {
+        "name": "UiPath.IntegrationService.Activities.SWEntities.C14A7809EB1_createOCR_Create",
+        "hash": "Z0Z4a0NQdnIvQ1h1ME02TzV5OExyclh6MS9kTWZyQitzV1R4MEhlVDJKUjZtaW42VUFtaXVCZDNnbHlaUGlNZ0M4NE9UNzM4NHFOZ0VPeW5zT2t6dlE9PQ",
+        "assemblyName": "C14A7809EB1_createOC.u0lzI4o7zwC17zEXU23Uhw44"
+      }
+    }
+  }
+}
