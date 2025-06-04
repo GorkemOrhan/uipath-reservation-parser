@@ -4,6 +4,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "jsonObj&84d56ba2-4269-40bc-aa98-a14700af003f",
         "reservationTable&892e16ab-812c-411c-9383-9bb418acecef"
       ],
       "ArgumentsSectionElementsOrder": null,

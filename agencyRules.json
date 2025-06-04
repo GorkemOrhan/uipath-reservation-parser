@@ -1,0 +1,110 @@
+[
+  {
+    "AgencyName": "Setur",
+    "DetectionKeywords": ["Setur", "Servis Turistik"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "Giriş Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "Çıkış Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "RoomCount": { "Pattern": "Oda: (\\d+)", "Method": "Groups" },
+      "AdultCount": { "Pattern": "1", "Method": "Literal" },
+      "ChildCount": { "Pattern": "0", "Method": "Literal" },
+      "GuestName": { "Pattern": "Misafir İsimleri\\s*(.+?)\\s+\\(", "Method": "Groups" },
+      "CompanyName": { "Pattern": "Firma Adı\\s*:\\s*(.+)", "Method": "Groups" },
+      "RoomType": { "Pattern": "Oda Tipi\\s*(.+?)\\s", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "", "Method": "None" },
+      "ReservationType": { "Pattern": "Rezervasyon Tipi\\s*:\\s*(.+)", "Method": "Groups" },
+      "Rate": { "Pattern": "Rezervasyon Toplamı\\s*:\\s*(.+?)\\s", "Method": "Groups" },
+      "Source": { "Pattern": "Setur", "Method": "Literal" }
+    }
+  },
+  {
+    "AgencyName": "Vista",
+    "DetectionKeywords": ["Vista Turizm", "vistatourism.com"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "(\\d{2}\\.\\d{2}\\.\\d{4})\\s+\\d+", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "\\d{2}\\.\\d{2}\\.\\d{4}\\s+(\\d{2}\\.\\d{2}\\.\\d{4})", "Method": "Groups" },
+      "RoomCount": { "Pattern": "", "Method": "None" },
+      "AdultCount": { "Pattern": "\\d{2}\\.\\d{2}\\.\\d{4}\\s+(\\d+)\\s+DBL-STANDART", "Method": "Groups" },
+      "ChildCount": { "Pattern": "", "Method": "None" },
+      "GuestName": { "Pattern": "\\d+\\s+([A-ZÇĞİÖŞÜ]+ [A-ZÇĞİÖŞÜ]+)\\s+\\.", "Method": "Groups" },
+      "CompanyName": { "Pattern": "Vista Turizm ve Seyahat A. Ş.", "Method": "Literal" },
+      "RoomType": { "Pattern": "\\d+\\s+(DBL\\-STANDART)", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "", "Method": "None" },
+      "ReservationType": { "Pattern": "Müşteri Ödemeli", "Method": "Literal" },
+      "Rate": { "Pattern": "(\\d{1,3},\\d{2})\\s*EURO", "Method": "Groups" },
+      "Source": { "Pattern": "Vista", "Method": "Literal" }
+    }
+  },
+  {
+    "AgencyName": "Bravo",
+    "DetectionKeywords": ["BRAVO", "Bravo Travel"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "Giriş Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "Çıkış Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "RoomCount": { "Pattern": "(?:TOPLAM ODA|Oda Sayısı)\\s*:\\s*\\n?(\\d+)", "Method": "Groups" },
+      "AdultCount": { "Pattern": "Yetişkin\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "ChildCount": { "Pattern": "Çocuk\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "GuestName": { "Pattern": "Mrs\\s+([A-ZÇĞİÖŞÜa-zçğıöşü]+\\s+[A-ZÇĞİÖŞÜa-zçğıöşü]+)", "Method": "Groups" },
+      "CompanyName": { "Pattern": "Bravo Travel", "Method": "Literal" },
+      "RoomType": { "Pattern": "Oda Tipi\\s*:\\s*\\w+\\s*\\((.*?)\\)", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "", "Method": "None" },
+      "ReservationType": { "Pattern": "Voucher No:\\s*(\\S+)", "Method": "Groups" },
+      "Rate": { "Pattern": "", "Method": "None" },
+      "Source": { "Pattern": "Bravo", "Method": "Literal" }
+    }
+  },
+  {
+    "AgencyName": "Tatilsepeti",
+    "DetectionKeywords": ["Tatilsepeti", "tatilsepeti"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "GİRİŞ TARİHİ:\\s*(\\d{2}\\.\\d{2}\\.\\d{4})", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "ÇIKIŞ TARİHİ:\\s*(\\d{2}\\.\\d{2}\\.\\d{4})", "Method": "Groups" },
+      "RoomCount": { "Pattern": "AÇIKLAMA:\\s.*?(\\d+)\\s+\\w+\\s+ODA", "Method": "Groups" },
+      "AdultCount": { "Pattern": "\\d+\\.\\s*Yetişkin", "Method": "Count" },
+      "ChildCount": { "Pattern": "\\d+\\.\\s*Çocuk", "Method": "Count" },
+      "GuestName": { "Pattern": "Yetişkin ([A-ZÇĞİÖŞÜa-zçğıöşü]+\\s+[A-ZÇĞİÖŞÜa-zçğıöşü]+)", "Method": "Groups" },
+      "CompanyName": { "Pattern": "TatilSepeti Kurumsal", "Method": "Literal" },
+      "RoomType": { "Pattern": "ODA TİPİ:\\s*(.*?)\\|", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "", "Method": "None" },
+      "ReservationType": { "Pattern": "VOUCHER NO\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "Rate": { "Pattern": "KAHVALTI DAHİL\\s+([\\d,.]+)\\s*EURO", "Method": "Groups" },
+      "Source": { "Pattern": "Tatilsepeti", "Method": "Literal" }
+    }
+  },
+  {
+    "AgencyName": "Safaryar",
+    "DetectionKeywords": ["Safaryar", "safaryar.com"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "Check-in:\\s+(.*)", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "Check-out:\\s+(.*)", "Method": "Groups" },
+      "RoomCount": { "Pattern": "Nr\\. of Rooms:\\s*(\\d+)", "Method": "Groups" },
+      "AdultCount": { "Pattern": "Passenger Type.*\\n([\\s\\S]+?)\\nnet price.*?Adult", "Method": "Count" },
+      "ChildCount": { "Pattern": "Passenger Type.*\\n([\\s\\S]+?)\\nnet price.*?Child", "Method": "Count" },
+      "GuestName": { "Pattern": "Guest Name:\\s+(.*)\\s+Check-in", "Method": "Groups" },
+      "CompanyName": { "Pattern": "Safaryar - Sindibad Turizm Ticaret A.S", "Method": "Literal" },
+      "RoomType": { "Pattern": "Adult \\(DBL\\)\\s+(.*)", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "Room No:\\s*(\\d+)", "Method": "Groups" },
+      "ReservationType": { "Pattern": "", "Method": "None" },
+      "Rate": { "Pattern": "net price:\\s*([0-9]+)\\s*\\$", "Method": "Groups" },
+      "Source": { "Pattern": "Safaryar", "Method": "Literal" }
+    }
+  },
+  {
+    "AgencyName": "Heysem",
+    "DetectionKeywords": ["HEYSEM", "Heysem Travel"],
+    "RegexRules": {
+      "ArrivalDate": { "Pattern": "Giriş Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "DepartureDate": { "Pattern": "Çıkış Tarihi\\s*:\\s*(\\d{2}/\\d{2}/\\d{4})", "Method": "Groups" },
+      "RoomCount": { "Pattern": "Oda Sayısı\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "AdultCount": { "Pattern": "Yetişkin\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "ChildCount": { "Pattern": "Çocuk\\s*:\\s*(\\d+)", "Method": "Groups" },
+      "GuestName": { "Pattern": "Mr\\s+([A-ZÇĞİÖŞÜa-zçğıöşü]+\\s+[A-ZÇĞİÖŞÜa-zçğıöşü]+)", "Method": "Groups" },
+      "CompanyName": { "Pattern": "Heysem Travel & Tourism", "Method": "Literal" },
+      "RoomType": { "Pattern": "\\((SUPERIOR ROOM)\\)", "Method": "Groups" },
+      "RoomNumber": { "Pattern": "", "Method": "None" },
+      "ReservationType": { "Pattern": "Voucher No:\\s*(\\d+)", "Method": "Groups" },
+      "Rate": { "Pattern": "", "Method": "None" },
+      "Source": { "Pattern": "Heysem", "Method": "Literal" }
+    }
+  }
+]
